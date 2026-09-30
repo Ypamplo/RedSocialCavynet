@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <title>Mensajes · RedSocial</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-blue-grey.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    html, body, h1, h2, h3, h4, h5 { font-family: "Open Sans", sans-serif; }
+  </style>
+</head>
+<body class="w3-theme-l5">
+
+<!-- Navbar (misma estructura con enlaces) -->
+<div class="w3-top">
+  <div class="w3-bar w3-theme-d2 w3-left-align w3-large">
+    <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-theme-d2" href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
+    <a href="plantilla-RedSocial.html" class="w3-bar-item w3-button w3-padding-large w3-theme-d4"><i class="fa fa-home w3-margin-right"></i>Logo</a>
+    <a href="profile.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white"><i class="fa fa-user"></i></a>
+    <a href="messages.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white"><i class="fa fa-envelope"></i></a>
+    <div class="w3-dropdown-hover w3-hide-small">
+      <button class="w3-button w3-padding-large"><i class="fa fa-bell"></i><span class="w3-badge w3-right w3-small w3-green">3</span></button>
+      <div class="w3-dropdown-content w3-card-4 w3-bar-block" style="width:300px">
+        <a href="#" class="w3-bar-item w3-button">Una nueva solicitud de amistad</a>
+        <a href="#" class="w3-bar-item w3-button">John Doe publicó en tu muro</a>
+        <a href="#" class="w3-bar-item w3-button">Jane le gusta tu publicación</a>
+      </div>
+    </div>
+    <a href="settings.html" class="w3-bar-item w3-button w3-hide-small w3-right w3-padding-large w3-hover-white"><i class="fa fa-cog"></i></a>
+    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-padding-large w3-hover-white">
+      <img src="https://www.w3schools.com/w3images/avatar2.png" class="w3-circle" style="height:23px;width:23px" alt="Avatar">
+    </a>
+  </div>
+</div>
+
+<div id="navDemo" class="w3-bar-block w3-theme-d2 w3-hide w3-hide-large w3-hide-medium w3-large">
+  <a href="plantilla-RedSocial.html" class="w3-bar-item w3-button w3-padding-large">Inicio</a>
+  <a href="profile.html" class="w3-bar-item w3-button w3-padding-large">Perfil</a>
+  <a href="messages.html" class="w3-bar-item w3-button w3-padding-large">Mensajes</a>
+  <a href="settings.html" class="w3-bar-item w3-button w3-padding-large">Configuración</a>
+</div>
+
+<!-- Contenedor principal -->
+<div class="w3-container w3-content" style="max-width:1200px;margin-top:80px">
+  <div class="w3-row">
+    <!-- Lista de chats -->
+    <div class="w3-col m4">
+      <div class="w3-card w3-round w3-white">
+        <div class="w3-container w3-padding-16 w3-theme-d2">
+          <h4><i class="fa fa-comments"></i> Conversaciones</h4>
+          <div class="w3-section">
+            <input class="w3-input w3-border w3-round" type="text" placeholder="Buscar mensajes...">
+          </div>
+        </div>
+        <ul class="w3-ul w3-hoverable">
+          <li class="w3-padding-16">
+            <img src="https://www.w3schools.com/w3images/avatar5.png" class="w3-left w3-circle w3-margin-right" style="width:50px">
+            <span class="w3-large">Jane Doe</span><br>
+            <span class="w3-opacity">Hola, ¿cómo estás?</span>
+            <span class="w3-right w3-small w3-text-theme">10:30</span>
+          </li>
+          <li class="w3-padding-16">
+            <img src="https://www.w3schools.com/w3images/avatar6.png" class="w3-left w3-circle w3-margin-right" style="width:50px">
+            <span class="w3-large">Angie Jane</span><br>
+            <span class="w3-opacity">¿Viste el nuevo proyecto?</span>
+            <span class="w3-right w3-small w3-text-theme">Ayer</span>
+          </li>
+          <li class="w3-padding-16 w3-theme-l4">
+            <img src="https://www.w3schools.com/w3images/avatar2.png" class="w3-left w3-circle w3-margin-right" style="width:50px">
+            <span class="w3-large">John Doe</span><br>
+            <span class="w3-opacity">¡Claro! Quedó genial.</span>
+            <span class="w3-right w3-small w3-text-theme">Ayer</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Ventana de chat activa -->
+    <div class="w3-col m8">
+      <div class="w3-card w3-round w3-white">
+        <div class="w3-container w3-padding-16 w3-theme-d2 w3-round-large">
+          <h4><img src="https://www.w3schools.com/w3images/avatar5.png" class="w3-circle" style="width:40px; vertical-align:middle;"> Jane Doe <span class="w3-opacity w3-medium"> · Activa ahora</span></h4>
+        </div>
+        <div class="w3-container w3-padding-16" style="height:400px; overflow-y:scroll;">
+          <div class="w3-panel w3-leftbar w3-border-blue w3-theme-l5 w3-round-large" style="max-width:80%;">
+            <p><strong>Jane Doe</strong> <span class="w3-opacity">10:28</span></p>
+            <p>¡Hola! ¿Cómo va el diseño?</p>
+          </div>
+          <div class="w3-panel w3-rightbar w3-border-green w3-theme-l4 w3-round-large w3-right" style="max-width:80%;">
+            <p><strong>Tú</strong> <span class="w3-opacity">10:30</span></p>
+            <p>Muy bien, casi terminado. ¿Te gustó la última versión?</p>
+          </div>
+          <div class="w3-panel w3-leftbar w3-border-blue w3-theme-l5 w3-round-large" style="max-width:80%;">
+            <p><strong>Jane Doe</strong> <span class="w3-opacity">10:32</span></p>
+            <p>Sí, está genial. Solo unos ajustes en los colores.</p>
+          </div>
+        </div>
+        <div class="w3-container w3-padding-16 w3-border-top">
+          <div class="w3-row">
+            <div class="w3-col s9">
+              <input class="w3-input w3-border w3-round" type="text" placeholder="Escribe un mensaje...">
+            </div>
+            <div class="w3-col s3">
+              <button class="w3-button w3-theme-d2 w3-round w3-block"><i class="fa fa-paper-plane"></i> Enviar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<br>
+
+<footer class="w3-container w3-theme-d3 w3-padding-16">
+  <h5>RedSocial © 2025</h5>
+</footer>
+
+<script>
+function openNav() {
+  var x = document.getElementById("navDemo");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else {
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <title>Mi perfil · RedSocial</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-blue-grey.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    html, body, h1, h2, h3, h4, h5 { font-family: "Open Sans", sans-serif; }
+  </style>
+</head>
+<body class="w3-theme-l5">
+
+<!-- Navbar (similar a la plantilla, pero con enlaces reales) -->
+<div class="w3-top">
+  <div class="w3-bar w3-theme-d2 w3-left-align w3-large">
+    <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-theme-d2" href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
+    <a href="plantilla-RedSocial.html" class="w3-bar-item w3-button w3-padding-large w3-theme-d4"><i class="fa fa-home w3-margin-right"></i>Logo</a>
+    <a href="profile.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="Perfil"><i class="fa fa-user"></i></a>
+    <a href="messages.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="Mensajes"><i class="fa fa-envelope"></i></a>
+    <div class="w3-dropdown-hover w3-hide-small">
+      <button class="w3-button w3-padding-large" title="Notificaciones"><i class="fa fa-bell"></i><span class="w3-badge w3-right w3-small w3-green">3</span></button>
+      <div class="w3-dropdown-content w3-card-4 w3-bar-block" style="width:300px">
+        <a href="#" class="w3-bar-item w3-button">Una nueva solicitud de amistad</a>
+        <a href="#" class="w3-bar-item w3-button">John Doe publicó en tu muro</a>
+        <a href="#" class="w3-bar-item w3-button">Jane le gusta tu publicación</a>
+      </div>
+    </div>
+    <a href="settings.html" class="w3-bar-item w3-button w3-hide-small w3-right w3-padding-large w3-hover-white" title="Configuración"><i class="fa fa-cog"></i></a>
+    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-padding-large w3-hover-white" title="Mi cuenta">
+      <img src="https://www.w3schools.com/w3images/avatar2.png" class="w3-circle" style="height:23px;width:23px" alt="Avatar">
+    </a>
+  </div>
+</div>
+
+<!-- Navbar móvil -->
+<div id="navDemo" class="w3-bar-block w3-theme-d2 w3-hide w3-hide-large w3-hide-medium w3-large">
+  <a href="plantilla-RedSocial.html" class="w3-bar-item w3-button w3-padding-large">Inicio</a>
+  <a href="profile.html" class="w3-bar-item w3-button w3-padding-large">Perfil</a>
+  <a href="messages.html" class="w3-bar-item w3-button w3-padding-large">Mensajes</a>
+  <a href="settings.html" class="w3-bar-item w3-button w3-padding-large">Configuración</a>
+  <a href="groups.html" class="w3-bar-item w3-button w3-padding-large">Grupos</a>
+</div>
+
+<!-- Contenedor de página -->
+<div class="w3-container w3-content" style="max-width:1400px;margin-top:80px">
+  <div class="w3-row">
+    <!-- Columna izquierda: info de perfil -->
+    <div class="w3-col m3">
+      <div class="w3-card w3-round w3-white">
+        <div class="w3-container">
+          <h4 class="w3-center">Mi perfil</h4>
+          <p class="w3-center"><img src="https://www.w3schools.com/w3images/avatar3.png" class="w3-circle" style="height:106px;width:106px" alt="Avatar"></p>
+          <hr>
+          <p><i class="fa fa-pencil fa-fw w3-margin-right w3-text-theme"></i> Diseñador UI</p>
+          <p><i class="fa fa-home fa-fw w3-margin-right w3-text-theme"></i> Londres, Reino Unido</p>
+          <p><i class="fa fa-birthday-cake fa-fw w3-margin-right w3-text-theme"></i> 1 de abril, 1988</p>
+          <p><i class="fa fa-users fa-fw w3-margin-right w3-text-theme"></i> 1.2k seguidores · 345 siguiendo</p>
+          <button class="w3-button w3-block w3-theme-d2 w3-margin-bottom"><i class="fa fa-pencil"></i> Editar perfil</button>
+        </div>
+      </div>
+      <br>
+      <!-- Fotos destacadas -->
+      <div class="w3-card w3-round w3-white">
+        <div class="w3-container">
+          <p><i class="fa fa-camera"></i> Fotos</p>
+          <div class="w3-row-padding">
+            <div class="w3-third"><img src="https://www.w3schools.com/w3images/lights.jpg" style="width:100%" class="w3-margin-bottom"></div>
+            <div class="w3-third"><img src="https://www.w3schools.com/w3images/nature.jpg" style="width:100%" class="w3-margin-bottom"></div>
+            <div class="w3-third"><img src="https://www.w3schools.com/w3images/mountains.jpg" style="width:100%" class="w3-margin-bottom"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Columna central: publicaciones y actividad -->
+    <div class="w3-col m7">
+      <!-- Portada -->
+      <div class="w3-card w3-round w3-white w3-margin-bottom">
+        <img src="https://www.w3schools.com/w3images/forest.jpg" alt="Portada" style="width:100%; max-height:200px; object-fit:cover;">
+        <div class="w3-container w3-padding">
+          <h3>Juan Pérez <span class="w3-opacity w3-medium">@juanperez</span></h3>
+          <p>Diseñador UI/UX. Amante del café y la fotografía. #w3css</p>
+        </div>
+      </div>
+
+      <!-- Publicar estado -->
+      <div class="w3-card w3-round w3-white w3-margin-bottom">
+        <div class="w3-container w3-padding">
+          <h6 class="w3-opacity">¿Qué estás pensando?</h6>
+          <p contenteditable="true" class="w3-border w3-padding">Comparte algo...</p>
+          <button type="button" class="w3-button w3-theme"><i class="fa fa-pencil"></i> Publicar</button>
+        </div>
+      </div>
+
+      <!-- Publicación 1 -->
+      <div class="w3-container w3-card w3-white w3-round w3-margin"><br>
+        <img src="https://www.w3schools.com/w3images/avatar2.png" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:60px">
+        <span class="w3-right w3-opacity">Hace 2 horas</span>
+        <h4>Juan Pérez</h4><br>
+        <hr class="w3-clear">
+        <p>¡Nuevo diseño de interfaz terminado! 🎨 ¿Qué opinan?</p>
+        <img src="https://www.w3schools.com/w3images/nature.jpg" style="width:100%" class="w3-margin-bottom">
+        <button type="button" class="w3-button w3-theme-d1 w3-margin-bottom"><i class="fa fa-thumbs-up"></i> Me gusta</button>
+        <button type="button" class="w3-button w3-theme-d2 w3-margin-bottom"><i class="fa fa-comment"></i> Comentar</button>
+      </div>
+
+      <!-- Publicación 2 -->
+      <div class="w3-container w3-card w3-white w3-round w3-margin"><br>
+        <img src="https://www.w3schools.com/w3images/avatar2.png" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:60px">
+        <span class="w3-right w3-opacity">Ayer</span>
+        <h4>Juan Pérez</h4><br>
+        <hr class="w3-clear">
+        <p>Feliz de anunciar que me uniré al equipo de diseño de W3Schools como colaborador. 🚀</p>
+        <button type="button" class="w3-button w3-theme-d1 w3-margin-bottom"><i class="fa fa-thumbs-up"></i> Me gusta</button>
+        <button type="button" class="w3-button w3-theme-d2 w3-margin-bottom"><i class="fa fa-comment"></i> Comentar</button>
+      </div>
+    </div>
+
+    <!-- Columna derecha -->
+    <div class="w3-col m2">
+      <div class="w3-card w3-round w3-white w3-center w3-padding-16">
+        <p><i class="fa fa-calendar"></i> Próximos eventos</p>
+        <p><strong>Reunión de diseño</strong><br>Viernes 15:00</p>
+        <button class="w3-button w3-block w3-theme-l4">Info</button>
+      </div>
+      <br>
+      <div class="w3-card w3-round w3-white w3-padding-16 w3-center">
+        <p>ADS</p>
+      </div>
+    </div>
+  </div>
+</div>
+<br>
+
+<footer class="w3-container w3-theme-d3 w3-padding-16">
+  <h5>RedSocial © 2025</h5>
+</footer>
+
+<script>
+function openNav() {
+  var x = document.getElementById("navDemo");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else {
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+</script>
+</body>
+</html>

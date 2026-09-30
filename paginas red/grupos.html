@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <title>Grupos · RedSocial</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-blue-grey.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    html, body, h1, h2, h3, h4, h5 { font-family: "Open Sans", sans-serif; }
+  </style>
+</head>
+<body class="w3-theme-l5">
+
+<!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar w3-theme-d2 w3-left-align w3-large">
+    <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-theme-d2" href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
+    <a href="plantilla-RedSocial.html" class="w3-bar-item w3-button w3-padding-large w3-theme-d4"><i class="fa fa-home w3-margin-right"></i>Logo</a>
+    <a href="profile.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white"><i class="fa fa-user"></i></a>
+    <a href="messages.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white"><i class="fa fa-envelope"></i></a>
+    <a href="groups.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white"><i class="fa fa-users"></i></a>
+    <div class="w3-dropdown-hover w3-hide-small">
+      <button class="w3-button w3-padding-large"><i class="fa fa-bell"></i><span class="w3-badge w3-right w3-small w3-green">3</span></button>
+      <div class="w3-dropdown-content w3-card-4 w3-bar-block" style="width:300px">
+        <a href="#" class="w3-bar-item w3-button">Una nueva solicitud de amistad</a>
+        <a href="#" class="w3-bar-item w3-button">John Doe publicó en tu muro</a>
+        <a href="#" class="w3-bar-item w3-button">Jane le gusta tu publicación</a>
+      </div>
+    </div>
+    <a href="settings.html" class="w3-bar-item w3-button w3-hide-small w3-right w3-padding-large w3-hover-white"><i class="fa fa-cog"></i></a>
+    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-padding-large w3-hover-white">
+      <img src="https://www.w3schools.com/w3images/avatar2.png" class="w3-circle" style="height:23px;width:23px" alt="Avatar">
+    </a>
+  </div>
+</div>
+
+<div id="navDemo" class="w3-bar-block w3-theme-d2 w3-hide w3-hide-large w3-hide-medium w3-large">
+  <a href="plantilla-RedSocial.html" class="w3-bar-item w3-button w3-padding-large">Inicio</a>
+  <a href="profile.html" class="w3-bar-item w3-button w3-padding-large">Perfil</a>
+  <a href="messages.html" class="w3-bar-item w3-button w3-padding-large">Mensajes</a>
+  <a href="settings.html" class="w3-bar-item w3-button w3-padding-large">Configuración</a>
+  <a href="groups.html" class="w3-bar-item w3-button w3-padding-large">Grupos</a>
+</div>
+
+<!-- Contenido -->
+<div class="w3-container w3-content" style="max-width:1200px;margin-top:80px">
+  <div class="w3-row-padding">
+    <!-- Columna izquierda: Mis grupos -->
+    <div class="w3-col m6">
+      <div class="w3-card w3-round w3-white">
+        <div class="w3-container w3-padding-16 w3-theme-d2">
+          <h3><i class="fa fa-group"></i> Mis grupos</h3>
+        </div>
+        <ul class="w3-ul">
+          <li class="w3-padding-16">
+            <img src="https://www.w3schools.com/w3images/avatar2.png" class="w3-left w3-circle w3-margin-right" style="width:50px">
+            <span class="w3-large">Diseñadores UI/UX</span><br>
+            <span class="w3-opacity">1.2k miembros · 15 publicaciones nuevas</span>
+            <button class="w3-button w3-small w3-theme-d2 w3-right w3-round">Ver grupo</button>
+          </li>
+          <li class="w3-padding-16">
+            <img src="https://www.w3schools.com/w3images/avatar5.png" class="w3-left w3-circle w3-margin-right" style="width:50px">
+            <span class="w3-large">Desarrollo Web</span><br>
+            <span class="w3-opacity">3.4k miembros · 8 publicaciones nuevas</span>
+            <button class="w3-button w3-small w3-theme-d2 w3-right w3-round">Ver grupo</button>
+          </li>
+          <li class="w3-padding-16">
+            <img src="https://www.w3schools.com/w3images/avatar6.png" class="w3-left w3-circle w3-margin-right" style="width:50px">
+            <span class="w3-large">Fotografía Creativa</span><br>
+            <span class="w3-opacity">856 miembros · 3 publicaciones nuevas</span>
+            <button class="w3-button w3-small w3-theme-d2 w3-right w3-round">Ver grupo</button>
+          </li>
+        </ul>
+        <div class="w3-container w3-padding-16">
+          <button class="w3-button w3-block w3-theme-l1"><i class="fa fa-plus"></i> Crear nuevo grupo</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Columna derecha: Grupos sugeridos -->
+    <div class="w3-col m6">
+      <div class="w3-card w3-round w3-white">
+        <div class="w3-container w3-padding-16 w3-theme-d1">
+          <h3><i class="fa fa-star"></i> Grupos sugeridos</h3>
+        </div>
+        <ul class="w3-ul">
+          <li class="w3-padding-16">
+            <img src="https://www.w3schools.com/w3images/forest.jpg" class="w3-left w3-circle w3-margin-right" style="width:50px; height:50px; object-fit:cover;">
+            <span class="w3-large">Viajeros del mundo</span><br>
+            <span class="w3-opacity">5.1k miembros</span>
+            <button class="w3-button w3-small w3-green w3-right w3-round"><i class="fa fa-plus"></i> Unirse</button>
+          </li>
+          <li class="w3-padding-16">
+            <img src="https://www.w3schools.com/w3images/lights.jpg" class="w3-left w3-circle w3-margin-right" style="width:50px; height:50px; object-fit:cover;">
+            <span class="w3-large">Tecnología y gadgets</span><br>
+            <span class="w3-opacity">8.2k miembros</span>
+            <button class="w3-button w3-small w3-green w3-right w3-round"><i class="fa fa-plus"></i> Unirse</button>
+          </li>
+          <li class="w3-padding-16">
+            <img src="https://www.w3schools.com/w3images/nature.jpg" class="w3-left w3-circle w3-margin-right" style="width:50px; height:50px; object-fit:cover;">
+            <span class="w3-large">Cocina fácil</span><br>
+            <span class="w3-opacity">2.7k miembros</span>
+            <button class="w3-button w3-small w3-green w3-right w3-round"><i class="fa fa-plus"></i> Unirse</button>
+          </li>
+        </ul>
+      </div>
+      <br>
+      <!-- Buscar grupos -->
+      <div class="w3-card w3-round w3-white">
+        <div class="w3-container w3-padding-16">
+          <h4>Buscar grupos</h4>
+          <input class="w3-input w3-border w3-round" type="text" placeholder="Nombre del grupo...">
+          <button class="w3-button w3-theme-d2 w3-margin-top w3-round"><i class="fa fa-search"></i> Buscar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<br>
+
+<footer class="w3-container w3-theme-d3 w3-padding-16">
+  <h5>RedSocial © 2025</h5>
+</footer>
+
+<script>
+function openNav() {
+  var x = document.getElementById("navDemo");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else {
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+</script>
+</body>
+</html>

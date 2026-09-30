@@ -1,3 +1,16 @@
 import { useState } from "react"
-import { useSocial } from "./SocialContext"
-export default function Navbar() { const { currentUser } = useSocial(); const [open, setOpen] = useState(false); return <header className="topbar"><a className="brand" href="#inicio"><span className="brand-mark">+</span> cavynet</a><label className="search-box">⌕<input type="search" placeholder="Buscar en Cavynet" aria-label="Buscar" /></label><nav className={open ? "topnav is-open" : "topnav"}><a className="nav-link active" href="#inicio">⌂ Inicio</a><a className="nav-link" href="#amigos">♧ Amigos</a><a className="nav-link" href="#mensajes">✉ Mensajes</a></nav><button className="profile-trigger" onClick={() => setOpen(!open)} type="button"><img src={currentUser.avatar} alt="" /><span>{currentUser.name}</span><b>⌄</b></button></header> }
+import { Link, NavLink } from "react-router-dom"
+import { useAuth } from "../auth/AuthContext"
+import { navigation } from "../routes/navigation"
+
+export default function Navbar() {
+  const { user, logout } = useAuth()
+  const [open, setOpen] = useState(false)
+  return <header className="topbar">
+    <Link className="brand" to="/inicio"><span className="brand-mark">+</span> cavynet</Link>
+    <button className="menu-toggle" aria-expanded={open} aria-controls="main-navigation" onClick={() => setOpen(!open)}>Menú</button>
+    <nav id="main-navigation" aria-label="Navegación principal" className={open ? "topnav is-open" : "topnav"}>{navigation.map(({ to, label }) => <NavLink key={to} to={to} className={({ isActive }) => isActive ? "nav-link active" : "nav-link"} onClick={() => setOpen(false)}>{label}</NavLink>)}</nav>
+    <Link className="profile-link" to="/perfil" aria-label="Ver mi perfil"><img src={user.avatar} alt="" /><span>{user.name}</span></Link>
+    <button className="logout-button" onClick={logout}>Cerrar sesión</button>
+  </header>
+}
